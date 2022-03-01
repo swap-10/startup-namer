@@ -38,12 +38,9 @@ class _RootWidgetState extends State<RootWidget> {
     );
   }
 }
-//
-// Inherited words
 
 class RandomWords extends StatefulWidget {
   final Set<WordPair> saved;
-  // final Widget child;
   const RandomWords({Key? key, required this.saved}) : super(key: key);
 
   @override
@@ -104,14 +101,12 @@ class _RandomWordsState extends State<RandomWords> {
         builder: (context) {
           return FavoriteWords(saved: widget.saved);
         },
-      ), // FavoriteWords(saved: _saved),
+      ),
     );
   }
 
   @override
   Widget build(BuildContext context) {
-    // final wordPair = WordPair.random();
-    // return Text(wordPair.asPascalCase);
     return Scaffold(
       appBar: AppBar(
         title: const Text("Startup Name Generator"),
